@@ -1,0 +1,497 @@
+/*
+   @bg : #192a32;
+   @button1 : #f2b237;
+   @button1-dark : #b67905;
+   @button2 : #31c4be
+   @button2-dark : #226e6c;
+   @c1 : #a8bec9;
+   #c2 : #14222d;
+   @font-family: 'Poppins', sans-serif;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #192a32;
+	--button-y: #f2b237;
+	--button-y-dark: #b67905;
+	--button-x: #31c4be;
+	--button-x-dark: #226e6c;
+	--white-smoke: #a8bec9;
+	--white-smoke-d: #efefef;
+	--dark: #14222d;
+	--dark-x: #1f3540;
+	--font-Poppins: "Poppins", sans-serif;
+	--box-shadow: 0px 5px 0px;
+	--d: #728793;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--white-smoke);
+	font-family: var(--font-Poppins);
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	/* background-color: var(--button-y); */
+	height: 411px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.d-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.center-container-box {
+	/* background-color: var(--button-x); */
+	position: relative;
+	top: 31px;
+}
+
+.center-container-box > h1[data-header] {
+	text-align: center;
+	font-family: var(--font-Poppins);
+	font-weight: 600;
+	font-size: 2.2rem;
+	color: var(--button-y);
+}
+
+.center-container-box > .logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0);
+    height: 39px;
+}
+.dialoge-box {
+	background-color: var(--dark-x);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: var(--box-shadow) var(--dark);
+	margin-bottom: 20px;
+	/* width: 350px;
+	height: 150px; */
+}
+
+.dialoge-box > h2 {
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 0.9rem;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+.dialoge-box > h2 ~ div.toggle-container {
+	background-color: var(--dark);
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.dialoge-box > h2 ~ div.toggle-container > button {
+	padding: 5px 70px;
+	border-radius: 5px;
+	font-size: 1.3rem;
+}
+.inactive {
+	background-color: transparent;
+	color: var(--white-smoke);
+	border: 2px solid transparent;
+}
+
+.active {
+	border: 2px solid var(--white-smoke-d);
+	background-color: var(--white-smoke-d);
+}
+
+.dialoge-box > h2 ~ div.toggle-container ~ p {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.dialoge-box > h2 ~ div.toggle-container > button:hover {
+	background-color: none;
+}
+
+.d-container > button {
+	margin: 8px 0px;
+	padding: 7px 0;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.btn-1 {
+	border-color: var(--button-y);
+	background-color: var(--button-y);
+	box-shadow: var(--box-shadow) var(--button-y-dark);
+
+}
+
+.btn-2 {
+	border-color: var(--button-x);
+	background-color: var(--button-x);
+	box-shadow: var(--box-shadow) var(--button-x-dark);
+}
+
+.flex-box-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.flex-box-container > h2 {
+	text-align: center;
+	font-family: var(--font-Poppins);
+	font-weight: 600;
+	/* font-size: 1.2rem; */
+	color: var(--button-y);
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.flex-box-container > h2 > span::before{
+	font-size: 1.3rem !important;
+}
+
+.flex-box-container > h2 > span[data-doddle-x] > i {
+	color: var(--button-x);
+	font-size: 1.4rem;
+}
+
+.gameBoard {
+	background-color: transparent;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	/* cursor: pointer; */
+}
+
+.grid-box-0 {
+	grid-area: 1 / 1 / 2 / 2;
+}
+.grid-box-1 {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.grid-box-2 {
+	grid-area: 1 / 3 / 2 / 4;
+}
+.grid-box-3 {
+	grid-area: 2 / 1 / 3 / 2;
+}
+.grid-box-4 {
+	grid-area: 2 / 2 / 3 / 3;
+}
+.grid-box-5 {
+	grid-area: 2 / 3 / 3 / 4;
+}
+.grid-box-6 {
+	grid-area: 3 / 1 / 4 / 2;
+}
+.grid-box-7 {
+	grid-area: 3 / 2 / 4 / 3;
+}
+.grid-box-8 {
+	grid-area: 3 / 3 / 4 / 4;
+}
+
+.grid-css- {
+	padding: 10px;
+	background-color: var(--dark-x);
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+	box-shadow: var(--box-shadow) var(--dark);
+	text-align: center;
+	font-size: 2.2rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.d {
+	padding: 6px 20px;
+	font-size: .900rem;
+	text-transform: uppercase;
+	background-color: var(--dark-x);
+	border:  1px solid transparent;
+	box-shadow: var(--box-shadow) var(--dark) ;
+	color: var(--white-smoke);
+	border-radius: 5px;
+}
+
+.r {
+	padding: 6px 20px;
+    font-size: .900rem;
+    text-transform: uppercase;
+    background-color: var(--dark-x);
+    border: 1px solid transparent;
+    box-shadow: var(--box-shadow) var(--dark);
+    color: var(--white-smoke);
+    border-radius: 5px;
+}
+
+.re-set {
+    color: var(--button-y);
+}
+
+
+
+.player_0_score {
+	background-color: var(--button-x);
+	border-radius: 10px;
+	border: 1px solid transparent;
+	text-align: center;
+	padding: 10px;
+	color: var(--dark);
+	margin-top: 10px;
+	width: 80px;
+	height: 60px;
+}
+
+.player_0_score > p {
+	font-size: .650rem;
+	text-transform: uppercase;
+
+}
+
+.player_0_score > h4 {
+	font-size: 1rem;
+}
+
+.player_1_score {
+	background-color: var(--button-y);
+	border-radius: 10px;
+	border: 1px solid transparent;
+	text-align: center;
+	padding: 10px;
+	color: var(--dark);
+	margin-top: 10px;
+	width: 80px;
+	height: 60px;
+	font-size: .890rem;
+}
+
+.player_1_score > p {
+	font-size: .650rem;
+	text-transform: uppercase;
+}
+.Ties {
+	background-color: var(--white-smoke);
+	border-radius: 10px;
+	border: 1px solid transparent;
+	text-align: center;
+	padding: 10px;
+	color: var(--dark);
+	margin-top: 10px;
+	width: 80px;
+	height: 60px;
+	font-size: .890rem;
+}
+
+.Ties > p {
+	font-size: .650rem;
+	text-transform: uppercase;
+}
+
+.logo-x::before,
+.logo-x::after{
+    content: '';
+	position: absolute;
+	width: 5px;
+    height: 30px;
+	border-radius: 50px;
+	background-color: var(--button-y);
+	text-align: center;
+	opacity: 0.8;
+}
+
+.logo-x::before {
+	transform: rotate(44deg);
+}
+.logo-x::after {
+	transform: rotate(-44deg);
+}
+
+.logo-o::before,
+.logo-o::after{
+    content: '';
+	position: absolute;
+	width: 30px;
+    height: 30px;
+	border-radius: 50px;
+	background-color: var(--white-smoke);
+	text-align: center;
+	opacity: 0.8;
+}
+.logo-o{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.logo-o::after {
+	width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: var(--dark);
+    text-align: center;
+    opacity: 0.8;
+
+}
+
+
+.x-mark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.gameBoard.x-turn  .-g-:hover {
+
+}
+.x-mark::before,
+.x-mark::after,
+.gameBoard.x-turn .box:not(.x-mark):not(.o-mark):hover::before,
+.gameBoard.x-turn .box:not(.x-mark):not(.o-mark):hover::after {
+    content: '';
+	position: absolute;
+	width: 5px;
+    height: 30px;
+	border-radius: 50px;
+	background-color: var(--white-smoke);
+	text-align: center;
+	opacity: 0.8;
+}
+
+
+.x-mark::before,
+.gameBoard.x-turn .box:hover::before{
+	transform: rotate(44deg);
+}
+
+.x-mark::after,
+.gameBoard.x-turn .box:hover::after{
+	transform: rotate(-44deg);
+}
+
+.gameBoard.o-turn  .box:hover {
+
+}
+
+.o-mark::before,
+.o-mark::after,
+.gameBoard.o-turn .box:not(.x-mark):not(.o-mark):hover::before,
+.gameBoard.o-turn .box:not(.x-mark):not(.o-mark):hover::after {
+    content:  '';
+	position: absolute;
+	border-radius: 50px;
+	background-color: var(--white-smoke);
+}
+
+.o-mark::before,
+.gameBoard.o-turn .box:not(.x-mark):not(.o-mark):hover::before{
+	width: 31px;
+	height: 31px;
+	background-color: var(--white-smoke);
+}
+
+.o-mark::after,
+.gameBoard.o-turn .box:not(.x-mark):not(.o-mark):hover::after {
+	width: 21px;
+	height: 21px;
+	background-color: var(--dark-x);
+}
+
+/* .o-mark::before,
+.o-mark::after,
+.gameBoard.o-turn .grid-css-:not(.x-mark):not(.o-mark):hover::before,
+.gameBoard.o-turn .grid-css-:not(.x-mark):not(.o-mark):hover::after {
+    content: '';
+	position: absolute;
+	width: 30px;
+    height: 30px;
+	border-radius: 50px;
+	background-color: var(--white-smoke);
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	/* text-align: center; */
+	/* opacity: 0.8; */
+/* }  */
+
+.-g-.x-mark,
+.-g-.o-mark,
+.-g-.mark{
+    cursor: not-allowed;
+}
+
+.-win-::before {
+   content: '';
+   position: absolute;
+   width: 5px;
+   height: 94px;
+   background-color: #31c4be;
+   border-radius: 5px;
+}
+/* .-win-:hover {} */
+.grid-css-.-win-::before {
+	cursor: not-allowed;
+}
+
+.-win-.-win-rotate-90::before {
+    transform: rotate(90deg);
+}
+.-win-.-win-rotate-135::before {
+	height: 129px;
+    transform: rotate(135deg);
+}
+
+.-win-.-win-rotate-225::before {
+	height: 129px;
+    transform: rotate(225deg);
+}
+/* .x-mark:hover {
+	const
+} */
+
+.opacity-0\.3 {
+    opacity: 0.3;
+}
+
+.opacity-1 {
+    opacity:1;
+}
+
+
+.danger {
+	color: hsl(348, 100%, 61%);
+}
